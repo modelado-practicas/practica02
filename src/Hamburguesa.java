@@ -18,7 +18,7 @@ public abstract class Hamburguesa {
 		ponerVegetales();
 		ponerCatsup();
 		ponerPan();
-		System.out.println("La " + nombre() + "esta "
+		System.out.println("La " + nombre() + " esta "
 				+ "lista.");
 	}
 	

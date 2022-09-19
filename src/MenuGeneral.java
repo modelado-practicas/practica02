@@ -1,18 +1,16 @@
-import preparacion.Hamburguesa;
-
 public class MenuGeneral implements Menu{
-    private Hamburguesa[] platillos;
+    private Platillo platillos[];
     private int items = 0;
     /**
      * 
      */
     public MenuGeneral() {
-    platillos = new Hamburguesa[10];
+    platillos = new Platillo[3]; //Tamanio minimo 3, Cambiable!!
     }
 
     @Override
-    public void agregarHamburguesa(Hamburguesa hamburguesa) {
-        platillos[items] = hamburguesa;
+    public void agregarPlatillo(Platillo platillo) {
+        platillos[items] = platillo;
         items += 1;
     }
 

@@ -1,12 +1,8 @@
-import preparacion.Hamburguesa;
-
-import preparacion.Hamburguesa;
-
 public interface Menu{
     /**
-     * @param hamburguesa La hamburguesa a agregar al Menu
+     * @param Platillo el Platillo a agregar al Menu
      */
-    void agregarHamburguesa(Hamburguesa hamburguesa);
+    void agregarPlatillo(Platillo platillo);
     /**
      * @return Iterator para poder recorrer el menu
      */

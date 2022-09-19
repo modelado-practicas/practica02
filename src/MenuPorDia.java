@@ -1,19 +1,17 @@
 import java.util.ArrayList;
 
-import preparacion.Hamburguesa;
-
 public class MenuPorDia implements Menu{
     
-    private ArrayList<Hamburguesa> lista;
+    private ArrayList<Platillo> lista;
     /**
      * 
      */
     public MenuPorDia() {
-    lista = new ArrayList<Hamburguesa>();
+    lista = new ArrayList<Platillo>();
     }
 
     @Override
-    public void agregarHamburguesa(Hamburguesa hamburguesa) {
+    public void agregarPlatillo(Platillo hamburguesa) {
         lista.add(hamburguesa);
     }
 

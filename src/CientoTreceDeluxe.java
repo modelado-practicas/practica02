@@ -1,5 +1,3 @@
-package preparacion;
-
 public class CientoTreceDeluxe extends Hamburguesa{
 
 	/**

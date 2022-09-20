@@ -1,5 +1,3 @@
-package preparacion;
-
 public interface Iterator{
     /**
      * metodo para regresar el siguiente elemento

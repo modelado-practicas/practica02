@@ -1,5 +1,3 @@
-package preparacion;
-
 public interface Menu{
     /**
      * @param Platillo el Platillo a agregar al Menu

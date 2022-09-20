@@ -1,5 +1,3 @@
-package preparacion;
-
 import java.util.Hashtable;
 
 public class MenuEspecial implements Menu{

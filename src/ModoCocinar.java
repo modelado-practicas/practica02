@@ -1,5 +1,3 @@
-package preparacion;
-
 public class ModoCocinar implements EstadoCocinero{
 	Robot cocinero;
 	

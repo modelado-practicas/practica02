@@ -1,5 +1,3 @@
-package preparacion;
-
 public class Platillo {
     private int id;
     private String nombre;

@@ -1,5 +1,3 @@
-package preparacion;
-
 public class Cliente {
 	private int idCliente;
 	private int distanciaMesa;

@@ -1,5 +1,3 @@
-package preparacion;
-
 public class HamburguesaDeSoya extends Hamburguesa{
 
 	/**

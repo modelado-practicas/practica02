@@ -1,6 +1,3 @@
-package preparacion;
-
-
 public class Robot {
 	private boolean ordenRecibida;
 	private Cliente clienteAAtender;

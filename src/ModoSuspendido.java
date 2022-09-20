@@ -1,5 +1,3 @@
-package preparacion;
-
 public class ModoSuspendido implements EstadoCocinero{
 	Robot cocinero;
 	

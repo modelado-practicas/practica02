@@ -26,7 +26,7 @@ public class Robot {
 		pedidoTomado = false;
 		comidaPreparada = false;
 		distanciaCaminada = 0;
-		
+	
 
 		modoSuspendido = new ModoSuspendido(this);
 		modoCaminar = new ModoCaminar(this);
@@ -100,13 +100,21 @@ public class Robot {
 		setDistanciaCaminada(getDistanciaCaminada() + 1);;
 	}
 	
-	public void tomarPedido() {
-		
+	public Menu leerMenus() {
+		return menusALeer; //este no se muy bien como se haga, pero es que imprima todas las opciones
+	}
+	
+	public void setComidaACocinar(Hamburguesa pedido) {
+		comidaACocinar = pedido;
+	}
+	
+	public String tomarPedido() {
+		comidaACocinar; /*Aqui es donde no sé como asignarlo */
+		System.out.println("Has escogido " + comidaACocinar.nombre());
 	}
 	
 	public void prepararComida() {
-		Hamburguesa burger = new ; 
-		burger.prepararHamburguesa();
+		comidaACocinar.prepararHamburguesa(); 
 		comidaPreparada = true;
 	}
 	

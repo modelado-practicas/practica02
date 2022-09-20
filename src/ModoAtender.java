@@ -23,6 +23,7 @@ public class ModoAtender implements EstadoCocinero{
 	@Override
 	public void atender() {
 		if(!cocinero.getPedidoTomado()){
+			cocinero.leerMenus();
 			System.out.println("///MODO ATENDER/// \nPor favor dile a McCocinero que deseas.");
 			cocinero.tomarPedido();
 			System.out.println("McCocinero ha tomado tu pedido.");

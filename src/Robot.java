@@ -16,11 +16,12 @@ public class Robot {
 	private EstadoCocinero modoAtender;
 	private EstadoCocinero modoCocinar;
 	
+	private Cliente comensal;
 	
 	
 	public Robot(int idCliente, int mesa){
 		ordenRecibida = false;
-		Cliente comensal = new Cliente(idCliente,mesa);
+		comensal = new Cliente(idCliente,mesa);
 		clienteAAtender = comensal;
 		ubicacionCorrecta = false;
 		pedidoTomado = false;
@@ -64,7 +65,7 @@ public class Robot {
 	}
 	
 	public boolean getPedidoTomado(){
-		if(clienteAAtender.getIdCliente() != id) {
+		if(clienteAAtender.getIdCliente() != comensal.getIdCliente()) {
 			return pedidoTomado;
 		}
 		else {
@@ -100,17 +101,66 @@ public class Robot {
 		setDistanciaCaminada(getDistanciaCaminada() + 1);;
 	}
 	
-	public Menu leerMenus() {
-		return menusALeer; //este no se muy bien como se haga, pero es que imprima todas las opciones
+	private void printMenu(Iterator it){
+		while(it.hasNext()){
+			Hamburguesa platillo = it.next();
+			System.out.println(platillo.toString());
+		}
+	}
+
+	public void leerMenus() {
+		Menu menuGeneral = new MenuGeneral();
+		Menu menuPorDia = new MenuPorDia();
+		Menu menuEspecial = new MenuEspecial();
+
+		Iterator itMenuGeneral= menuGeneral.createIterator();
+		Iterator itMenuPorDia= menuPorDia.createIterator();
+		Iterator itmenuEspecial= menuEspecial.createIterator();
+
+		printMenu(itMenuGeneral);
+		printMenu(itMenuPorDia);
+		printMenu(itmenuEspecial);
 	}
 	
 	public void setComidaACocinar(Hamburguesa pedido) {
 		comidaACocinar = pedido;
 	}
-	
-	public String tomarPedido() {
-		comidaACocinar; /*Aqui es donde no sé como asignarlo */
-		return ("Has escogido " + comidaACocinar.nombre());
+	private Hamburguesa buscarHamburguesa(Iterator it, int id){
+		Hamburguesa hamburguesa = null;
+		while(it.hasNext()){
+			Hamburguesa platillo = it.next();
+			if(platillo.getId() == id){
+				hamburguesa = platillo;
+				break;
+			}
+		}
+		return hamburguesa;
+	}
+
+	public String tomarPedido(int id) {
+		Menu menuGeneral = new MenuGeneral();
+		Menu menuPorDia = new MenuPorDia();
+		Menu menuEspecial = new MenuEspecial();
+
+		Iterator itMenuGeneral= menuGeneral.createIterator();
+		Iterator itMenuPorDia= menuPorDia.createIterator();
+		Iterator itmenuEspecial= menuEspecial.createIterator();
+
+		comidaACocinar = null;
+		comidaACocinar = buscarHamburguesa(itMenuGeneral, id);
+		if(comidaACocinar == null){
+			comidaACocinar = buscarHamburguesa(itMenuPorDia, id);
+		}
+		if(comidaACocinar == null){
+			comidaACocinar = buscarHamburguesa(itmenuEspecial, id);
+		}
+		if(comidaACocinar != null){
+			return ("Has escogido " + comidaACocinar.nombre());
+		}else{
+			return "Opcion invalida";
+		}
+		
+		
 	}
 	
 	public void prepararComida() {

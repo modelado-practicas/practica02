@@ -1,5 +1,9 @@
 public class CientoTreceDeluxe extends Hamburguesa{
 
+	public CientoTreceDeluxe() {
+		super(7, "Ciento Trece Gramos Deluxe", "Ciento Trece Gramos Deluxe", 300.00, true, false);
+	}
+
 	/**
      * Metodo que nos da el nombre de esta hamburguesa
      * @return String El nombre de la hamburguesa

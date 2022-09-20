@@ -1,26 +1,26 @@
 public class ArrayIterator implements Iterator{
 
-    Platillo platillos[];
+    Hamburguesa hamburguesas[];
     int posicion = 0;
 
     /**
      * Constructor del iterador para arreglos
-     * @param platillos Arreglo de platillos por iterar
+     * @param hamburguesas Arreglo de hamburguesas por iterar
      */
-    public ArrayIterator(Platillo platillos[]){
-        this.platillos = platillos;
+    public ArrayIterator(Hamburguesa hamburguesas[]){
+        this.hamburguesas = hamburguesas;
     }
 
     @Override
-    public Platillo next() {
-        Platillo platillo = platillos[posicion];
+    public Hamburguesa next() {
+        Hamburguesa hamburguesa = hamburguesas[posicion];
         posicion +=1;
-        return platillo;
+        return hamburguesa;
     }
 
     @Override
     public boolean hasNext(){
-        if(posicion >= platillos.length || platillos[posicion] == null){
+        if(posicion >= hamburguesas.length || hamburguesas[posicion] == null){
             return false;
         }else{
             return true;

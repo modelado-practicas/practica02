@@ -1,5 +1,9 @@
 public class HamburguesaDeSoya extends Hamburguesa{
 
+	public HamburguesaDeSoya() {
+		super(3, "HamburguesaDeSoya", "HamburguesaDeSoya", 100.00, false, true);
+	}
+
 	/**
      * Metodo que nos da el nombre de esta hamburguesa
      * @return String El nombre de la hamburguesa

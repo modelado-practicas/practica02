@@ -9,6 +9,22 @@ import java.io.InputStreamReader;
 
 public abstract class Hamburguesa {
 	
+	private int id;
+    private String nombre;
+    private String descripcion;
+    private Double precio;
+    private boolean queso;
+    private boolean vegetariano;
+
+	public Hamburguesa(int id, String nombre, String descripcion, Double precio, boolean queso, boolean vegetariano) {
+		this.id = id;
+		this.nombre = nombre;
+		this.descripcion = descripcion;
+		this.precio = precio;
+		this.queso = queso;
+		this.vegetariano = vegetariano;
+	}
+
 	/**
      * Metodo que regresa la descripcion completa de la
      * preparacion de nuestra hamburguesa
@@ -125,5 +141,14 @@ public abstract class Hamburguesa {
 			return "no";
 		}
 		return respuesta;
+	}
+
+	@Override
+	public String toString() {
+		return ""+id+".- "+nombre+", "+precio+", "+descripcion;
+	}
+
+	public int getId() {
+		return id;
 	}
 }

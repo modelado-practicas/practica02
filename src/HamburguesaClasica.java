@@ -1,5 +1,9 @@
 public class HamburguesaClasica extends Hamburguesa {
 	
+	public HamburguesaClasica() {
+		super(1, "Hamburguesa Clasica", "Hamburguesa Clasica", 100.00, true, false);
+	}
+
 	/**
      * Metodo que nos da el nombre de esta hamburguesa
      * @return String El nombre de la hamburguesa

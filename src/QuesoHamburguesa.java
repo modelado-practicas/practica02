@@ -1,5 +1,9 @@
 public class QuesoHamburguesa extends Hamburguesa {
 	
+	public QuesoHamburguesa() {
+		super(4, "QuesoHamburguesa", "QuesoHamburguesa", 130.00, true, false);
+	}
+
 	/**
      * Metodo que nos da el nombre de esta hamburguesa
      * @return String El nombre de la hamburguesa

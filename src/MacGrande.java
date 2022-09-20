@@ -1,5 +1,9 @@
 public class MacGrande extends Hamburguesa{
 
+	public MacGrande() {
+		super(2, "MacGrande", "MacGrande", 150.00, true, false);
+	}
+
 	/**
      * Metodo que nos da el nombre de esta hamburguesa
      * @return String El nombre de la hamburguesa

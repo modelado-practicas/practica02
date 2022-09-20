@@ -1,5 +1,9 @@
 public class McPolloAsado extends Hamburguesa{
 	
+	public McPolloAsado() {
+		super(9, "McPollo Asado", "McPollo Asado", 200.00, true, false);
+	}
+
 	/**
      * Metodo que nos da el nombre de esta hamburguesa
      * @return String El nombre de la hamburguesa

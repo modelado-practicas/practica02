@@ -25,7 +25,7 @@ public class ModoAtender implements EstadoCocinero{
 		if(!cocinero.getPedidoTomado()){
 			cocinero.leerMenus();
 			System.out.println("///MODO ATENDER/// \nPor favor dile a McCocinero que deseas.");
-			cocinero.tomarPedido();
+			System.out.println(cocinero.tomarPedido(3)); //OJO ES PROTOTIPO, SE LE PUEDE AGREGAR UN SCANNER para el id
 			System.out.println("McCocinero ha tomado tu pedido.");
 		} else {
 			System.out.println("///MODO ATENDER/// \nMcCocinero ya ha tomado tu pedido."

@@ -1,15 +1,22 @@
 public class MenuGeneral implements Menu{
-    private Platillo platillos[];
+    private Hamburguesa platillos[];
     private int items = 0;
     /**
      * 
      */
     public MenuGeneral() {
-    platillos = new Platillo[3]; //Tamanio minimo 3, Cambiable!!
+        platillos = new Hamburguesa[3];
+
+        Hamburguesa hamburguesa1 = new HamburguesaClasica();
+        this.agregarPlatillo(hamburguesa1);
+        Hamburguesa hamburguesa2 = new MacGrande();
+        this.agregarPlatillo(hamburguesa2);
+        Hamburguesa hamburguesa3 = new HamburguesaDeSoya();
+        this.agregarPlatillo(hamburguesa3);
     }
 
     @Override
-    public void agregarPlatillo(Platillo platillo) {
+    public void agregarPlatillo(Hamburguesa platillo) {
         platillos[items] = platillo;
         items += 1;
     }

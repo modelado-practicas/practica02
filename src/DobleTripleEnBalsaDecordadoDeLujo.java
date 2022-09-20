@@ -1,5 +1,9 @@
 public class DobleTripleEnBalsaDecordadoDeLujo extends Hamburguesa{
 
+	public DobleTripleEnBalsaDecordadoDeLujo() {
+		super(8, "Doble Triple En Balsa Decordado De Lujo", "Doble Triple En Balsa Decordado De Lujo", 300.00, true, false);
+	}
+
 	/**
      * Metodo que nos da el nombre de esta hamburguesa
      * @return String El nombre de la hamburguesa

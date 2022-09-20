@@ -1,3 +1,5 @@
+package preparacion;
+
 import java.util.ArrayList;
 
 public class ArrayListIterator implements Iterator{

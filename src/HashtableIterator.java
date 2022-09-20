@@ -1,3 +1,5 @@
+package preparacion;
+
 import java.util.Hashtable;
 
 public class HashtableIterator implements Iterator{

@@ -1,3 +1,5 @@
+package preparacion;
+
 public class ArrayIterator implements Iterator{
 
     Platillo platillos[];

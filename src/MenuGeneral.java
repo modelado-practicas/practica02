@@ -1,3 +1,5 @@
+package preparacion;
+
 public class MenuGeneral implements Menu{
     private Platillo platillos[];
     private int items = 0;

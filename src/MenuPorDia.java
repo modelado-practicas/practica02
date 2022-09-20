@@ -11,8 +11,8 @@ public class MenuPorDia implements Menu{
     }
 
     @Override
-    public void agregarPlatillo(Platillo hamburguesa) {
-        lista.add(hamburguesa);
+    public void agregarPlatillo(Platillo platillo) {
+        lista.add(platillo);
     }
 
     @Override

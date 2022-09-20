@@ -46,7 +46,7 @@ public class ModoCaminar implements EstadoCocinero {
 
 	@Override
 	public void cocinar() {
-		System.out.println("///MODO CAMINAR/// \nMcCocinero no puede cocinar antes de tomar "
+		System.out.println("///MODO CAMINAR/// \nMcCocinero no puede cocinar antes de "
 				+ "tomar tu orden.");
 	}
 

@@ -110,7 +110,7 @@ public class Robot {
 	
 	public String tomarPedido() {
 		comidaACocinar; /*Aqui es donde no sé como asignarlo */
-		System.out.println("Has escogido " + comidaACocinar.nombre());
+		return ("Has escogido " + comidaACocinar.nombre());
 	}
 	
 	public void prepararComida() {

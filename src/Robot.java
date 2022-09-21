@@ -2,7 +2,6 @@ public class Robot {
 	private boolean ordenRecibida;
 	private Cliente clienteAAtender;
 	private boolean ubicacionCorrecta;
-	private boolean menusLeidos;
 	private boolean pedidoTomado;
 	private boolean comidaPreparada;
 	private int distanciaCaminada;
@@ -24,7 +23,6 @@ public class Robot {
 		Cliente comensal = new Cliente(idCliente,mesa);
 		clienteAAtender = comensal;
 		ubicacionCorrecta = false;
-		menusLeidos = false;
 		pedidoTomado = false;
 		comidaPreparada = false;
 		distanciaCaminada = 0;
@@ -116,7 +114,6 @@ public class Robot {
 		printMenu(itMenuPorDia);
 		printMenu(itmenuEspecial);
 		
-		menusLeidos = true;
 	}
 	
 	public void setComidaACocinar(Hamburguesa pedido) {

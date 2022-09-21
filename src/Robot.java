@@ -4,6 +4,7 @@ public class Robot {
 	private boolean ordenRecibida;
 	private Cliente clienteAAtender;
 	private boolean ubicacionCorrecta;
+	private boolean menusLeidos;
 	private boolean pedidoTomado;
 	private boolean comidaPreparada;
 	private int distanciaCaminada;
@@ -25,6 +26,7 @@ public class Robot {
 		Cliente comensal = new Cliente(idCliente,mesa);
 		clienteAAtender = comensal;
 		ubicacionCorrecta = false;
+		menusLeidos = false;
 		pedidoTomado = false;
 		comidaPreparada = false;
 		distanciaCaminada = 0;
@@ -119,13 +121,9 @@ public class Robot {
 		printMenu(itMenuPorDia);
 		System.out.println("\tMENU ESPECIAL: ");
 		printMenu(itmenuEspecial);
-<<<<<<< HEAD
 		System.out.println("----------------------------------------------------");
 
 		menusLeidos = true;
-=======
-		
->>>>>>> b4846040470f3d158c5f4c03bd06e4357c878967
 	}
 	
 	public void setComidaACocinar(Hamburguesa pedido) {

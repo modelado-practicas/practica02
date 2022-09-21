@@ -48,11 +48,7 @@ public class Main {
 						opcion = Integer.parseInt(opcionUsuario);
 						break;
 					}catch (NumberFormatException ex){
-<<<<<<< HEAD
 						System.out.println("Por favor elige la opcion VALIDA\n\n"
-=======
-						System.out.println("Por favor elige la opcion VALIDA\n "
->>>>>>> b4846040470f3d158c5f4c03bd06e4357c878967
 							+"1.- Llamar al cocinero.\n" +
 							"2.- Atender.\n" + 
 							"3.- Cocinar.\n" + 

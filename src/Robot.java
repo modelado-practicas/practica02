@@ -2,11 +2,12 @@ public class Robot {
 	private boolean ordenRecibida;
 	private Cliente clienteAAtender;
 	private boolean ubicacionCorrecta;
+	private boolean menusLeidos;
 	private boolean pedidoTomado;
 	private boolean comidaPreparada;
 	private int distanciaCaminada;
 	
-	private Menu menusALeer;
+	
 	private Hamburguesa comidaACocinar;
 	
 	private EstadoCocinero estadoActual;
@@ -16,14 +17,14 @@ public class Robot {
 	private EstadoCocinero modoAtender;
 	private EstadoCocinero modoCocinar;
 	
-	private Cliente comensal;
 	
 	
 	public Robot(int idCliente, int mesa){
 		ordenRecibida = false;
-		comensal = new Cliente(idCliente,mesa);
+		Cliente comensal = new Cliente(idCliente,mesa);
 		clienteAAtender = comensal;
 		ubicacionCorrecta = false;
+		menusLeidos = false;
 		pedidoTomado = false;
 		comidaPreparada = false;
 		distanciaCaminada = 0;
@@ -65,13 +66,7 @@ public class Robot {
 	}
 	
 	public boolean getPedidoTomado(){
-		if(clienteAAtender.getIdCliente() != comensal.getIdCliente()) {
-			return pedidoTomado;
-		}
-		else {
-			pedidoTomado = true;
-			return pedidoTomado;
-		}
+		return pedidoTomado;
 	}
 	
 	public boolean getComidaPreparada() {
@@ -120,6 +115,8 @@ public class Robot {
 		printMenu(itMenuGeneral);
 		printMenu(itMenuPorDia);
 		printMenu(itmenuEspecial);
+		
+		menusLeidos = true;
 	}
 	
 	public void setComidaACocinar(Hamburguesa pedido) {
@@ -155,6 +152,7 @@ public class Robot {
 			comidaACocinar = buscarHamburguesa(itmenuEspecial, id);
 		}
 		if(comidaACocinar != null){
+			pedidoTomado = true;
 			return ("Has escogido " + comidaACocinar.nombre());
 		}else{
 			return "Opcion invalida";

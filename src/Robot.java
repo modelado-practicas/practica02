@@ -181,7 +181,7 @@ public class Robot {
 	
 	public void prepararComida() {
 		comidaACocinar.prepararHamburguesa(); 
-		comidaPreparada = true;
+		comidaPreparada = true; 
 	}
 	
 	public void asignarNuevoEstado(EstadoCocinero nuevoEstado){

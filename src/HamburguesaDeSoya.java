@@ -1,7 +1,7 @@
 public class HamburguesaDeSoya extends Hamburguesa{
 
 	public HamburguesaDeSoya() {
-		super(3, "HamburguesaDeSoya", "HamburguesaDeSoya", 100.00, false, true);
+		super(3, "Hamburguesa de Soya", "Hamburguesa de Soya", 100.00, false, true);
 	}
 
 	/**

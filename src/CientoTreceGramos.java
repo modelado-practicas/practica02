@@ -1,7 +1,7 @@
 public class CientoTreceGramos extends Hamburguesa{
 	
 	public CientoTreceGramos() {
-		super(5, "CientoTreceGramos", "CientoTreceGramos", 150.00, true, false);
+		super(5, "Ciento Trece Gramos", "Ciento Trece Gramos", 150.00, true, false);
 	}
 
 	/**

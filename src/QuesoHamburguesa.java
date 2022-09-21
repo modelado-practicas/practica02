@@ -1,7 +1,7 @@
 public class QuesoHamburguesa extends Hamburguesa {
 	
 	public QuesoHamburguesa() {
-		super(4, "QuesoHamburguesa", "QuesoHamburguesa", 130.00, true, false);
+		super(4, "Queso Hamburguesa", "Queso Hamburguesa", 130.00, true, false);
 	}
 
 	/**

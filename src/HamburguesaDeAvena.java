@@ -1,7 +1,7 @@
 public class HamburguesaDeAvena extends Hamburguesa{
 	
 	public HamburguesaDeAvena() {
-		super(6, "HamburguesaDeAvena", "HamburguesaDeAvena", 100.00, false, true);
+		super(6, "Hamburguesa de Avena", "Hamburguesa de Avena", 100.00, false, true);
 	}
 
 	/**

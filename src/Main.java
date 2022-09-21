@@ -36,7 +36,7 @@ public class Main {
 		
 		do{
 			System.out.println(
-				"1.- Llamar al cocinero.\n" +
+				"\n1.- Llamar al cocinero.\n" +
 				"2.- Atender.\n" + 
 				"3.- Cocinar.\n" + 
 				"4.- Suspenderse.\n" +
@@ -48,7 +48,7 @@ public class Main {
 						opcion = Integer.parseInt(opcionUsuario);
 						break;
 					}catch (NumberFormatException ex){
-						System.out.println("Por favor elige la opcion VALIDA "
+						System.out.println("Por favor elige la opcion VALIDA\n\n"
 							+"1.- Llamar al cocinero.\n" +
 							"2.- Atender.\n" + 
 							"3.- Cocinar.\n" + 

@@ -20,6 +20,7 @@ public class MenuEspecial implements Menu{
     @Override
     public void agregarPlatillo(Hamburguesa platillo) {
         tabla.put(posicion, platillo);
+        posicion+=1;
     }
 
     @Override

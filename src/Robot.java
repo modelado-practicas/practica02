@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Robot {
 	private boolean ordenRecibida;
 	private Cliente clienteAAtender;
@@ -112,10 +114,15 @@ public class Robot {
 		Iterator itMenuPorDia= menuPorDia.createIterator();
 		Iterator itmenuEspecial= menuEspecial.createIterator();
 
+		System.out.println("----------------------------------------------------");
+		System.out.println("\tMENU GENERAL: ");
 		printMenu(itMenuGeneral);
+		System.out.println("\tMENU POR DIA: ");
 		printMenu(itMenuPorDia);
+		System.out.println("\tMENU ESPECIAL: ");
 		printMenu(itmenuEspecial);
-		
+		System.out.println("----------------------------------------------------");
+
 		menusLeidos = true;
 	}
 	
@@ -134,7 +141,18 @@ public class Robot {
 		return hamburguesa;
 	}
 
-	public String tomarPedido(int id) {
+	public String tomarPedido() {
+		int id =0;
+
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Ingresa el ID del platillo que deseas: ");
+		try {
+			String opcion = scan.nextLine();
+			id = Integer.parseInt(opcion);
+		}catch (NumberFormatException ex){
+			System.out.println("Por favor elige una opcion VALIDA");
+		}
+		
 		Menu menuGeneral = new MenuGeneral();
 		Menu menuPorDia = new MenuPorDia();
 		Menu menuEspecial = new MenuEspecial();

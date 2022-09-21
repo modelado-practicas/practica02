@@ -145,7 +145,7 @@ public abstract class Hamburguesa {
 
 	@Override
 	public String toString() {
-		return ""+id+".- "+nombre+", "+precio+", "+descripcion;
+		return ""+id+".- "+nombre+", $"+precio+", "+descripcion;
 	}
 
 	public int getId() {

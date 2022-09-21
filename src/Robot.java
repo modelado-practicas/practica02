@@ -75,7 +75,7 @@ public class Robot {
 	}
 	
 	public boolean getComidaPreparada() {
-		if (pedidoTomado == true && estadoActual == modoCocinar) {
+		if (pedidoTomado == true && (estadoActual == modoCocinar || estadoActual == modoSuspendido)) {
 			return comidaPreparada;
 		}
 		else {
